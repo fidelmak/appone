@@ -1,32 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, SafeAreaView, View, Pressable , Image, ScrollView } from 'react-native';
-import News from './components/news';
+import { StyleSheet, Text, SafeAreaView, View, Pressable , Image } from 'react-native';
 
-export default function App() {
+export default function News() {
   return (
-    <SafeAreaView >
-      <StatusBar style="auto" />
-
-      <View style={styles.appBar}>
-      <Text style={styles.appBarTitle}>Daily News</Text>
-    </View>
-    <ScrollView>
-    <View style={styles.container} > 
-      <News />
-      <News />
-      <News />
-      <News />
-      <News />
-      <News />
-
-        </View>
-   
+    <View >
+       <View style={{ alignItems: 'flex-start' }}>
+        <Image
+          //source={{ uri: 'https://picsum.photos/200/300/' }}
+          source={require('../assets/cake.jpeg')}
+          style={styles.img}
+        />
+      </View>
+            
       
-     </ScrollView>
-    </SafeAreaView>
-  );
+       <Text style={styles.p} numberOfLines={3}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Nobis ipsa porro voluptate aspernatur quia assumenda voluptatum sapiente ea itaque ut!
+            </Text>
+            
+            <View style={styles.nr}>
+              <Pressable style={styles.btn} onPress={() => {}}>
+              <Text style={{ color: 'white' }}>Read More</Text>
+              
+            </Pressable>
+           <View style={{ width: 20 }} />
+      
+            <Pressable style={styles.btn2} onPress={() => {}}>
+              <Text style={{ color: 'green' }}>Share</Text>
+              
+            </Pressable>
+      
+            </View>
+            <View style={{ height: 20 }} />
+            
+           
+      </View>
+      
+    
+  )
 }
-
 const styles = StyleSheet.create({
   container: {
     //flex: 1,
@@ -48,24 +59,7 @@ img: {
        marginLeft: 0
     }
   ,
-  appBar: {
-    marginTop: 40,
-    backgroundColor: 'white',
-    height: 56,
-    width: '100%',
-   
-    justifyContent: 'center',
-    alignItems: 'center',
-   
-   
-   
-   
-  },
-  appBarTitle: {
-    color: 'green',
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
+ 
   txt: {
     color: 'green',
     fontSize: 42,
@@ -113,3 +107,4 @@ img: {
   },
  
 });
+
