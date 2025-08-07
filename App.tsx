@@ -1,29 +1,45 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, SafeAreaView, View, Pressable , Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View, Pressable , Image, ScrollView, ActivityIndicator } from 'react-native';
 import News from './components/news';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Lflex from './components/lflex';
+import Flexdirection from './components/flexdirection';
 
 export default function App() {
   return (
-    <SafeAreaView >
-      <StatusBar style="auto" />
+    // <SafeAreaView >
+    //   <StatusBar style="auto" />
 
-      <View style={styles.appBar}>
-      <Text style={styles.appBarTitle}>Daily News</Text>
-    </View>
-    <ScrollView>
-    <View style={styles.container} > 
-      <News />
-      <News />
-      <News />
-      <News />
-      <News />
-      <News />
+    //   <View style={styles.appBar}>
+    //   <Text style={styles.appBarTitle}>Latest News</Text>
+    //    <ActivityIndicator  color={"red"}/>
+    // </View>
+    // <ScrollView>
+    // <View style={styles.container} > 
+    //   <News />
+    //   <News />
+    //   <News />
+    //   <News />
+    //   <News />
+    //   <News />
 
-        </View>
+    //     </View>
    
       
-     </ScrollView>
-    </SafeAreaView>
+    //  </ScrollView>
+    
+
+    // </SafeAreaView>
+    <>
+    {/* <Lflex color="red" mflex={1} />
+    <Lflex color="blue" mflex={2} />
+    <Lflex color="green" mflex={3} />
+    <Lflex color="yellow" mflex={4} /> */}
+
+   < Flexdirection />
+    </>
+
+   
   );
 }
 

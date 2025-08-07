@@ -1,14 +1,30 @@
-import { StyleSheet, Text, SafeAreaView, View, Pressable , Image } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, SafeAreaView, View, Pressable , Image, ActivityIndicator } from 'react-native';
 
 export default function News() {
+ const [isPressed, setIsPressed] = useState(false);
+    const handlePress = () => {
+    setIsPressed(!isPressed);
+  };
+
+
   return (
     <View >
        <View style={{ alignItems: 'flex-start' }}>
-        <Image
+
+        <Pressable
+        onPress={handlePress}
+        >
+             <Image
           //source={{ uri: 'https://picsum.photos/200/300/' }}
           source={require('../assets/cake.jpeg')}
-          style={styles.img}
+          style={[
+          styles.img,
+          { borderColor: isPressed ? 'green' : 'gray' } // Dynamic border color
+        ]}
         />
+        </Pressable>
+       
       </View>
             
       
@@ -54,8 +70,8 @@ img: {
       height: 150,
       marginBottom: 20,
       borderRadius: 10,
-      borderWidth: 1,
-      borderColor: 'green',
+      borderWidth: 3,
+     
        marginLeft: 0
     }
   ,
