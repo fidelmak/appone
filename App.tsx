@@ -4,6 +4,7 @@ import News from './components/news';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Lflex from './components/lflex';
 import Flexdirection from './components/flexdirection';
+import Dimen from './components/dimen';
 
 export default function App() {
   return (
@@ -36,7 +37,7 @@ export default function App() {
     <Lflex color="green" mflex={3} />
     <Lflex color="yellow" mflex={4} /> */}
 
-   < Flexdirection />
+   < Dimen />
     </>
 
    
