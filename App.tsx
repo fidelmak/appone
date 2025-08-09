@@ -5,9 +5,15 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Lflex from './components/lflex';
 import Flexdirection from './components/flexdirection';
 import Dimen from './components/dimen';
+import Nusestate from './components/usestate';
+import UseStateExample from './components/usestate';
 
 export default function App() {
   return (
+
+
+
+    
     // <SafeAreaView >
     //   <StatusBar style="auto" />
 
@@ -37,7 +43,7 @@ export default function App() {
     <Lflex color="green" mflex={3} />
     <Lflex color="yellow" mflex={4} /> */}
 
-   < Dimen />
+   < UseStateExample  />
     </>
 
    
