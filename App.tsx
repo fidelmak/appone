@@ -7,6 +7,8 @@ import Flexdirection from './components/flexdirection';
 import Dimen from './components/dimen';
 import Nusestate from './components/usestate';
 import UseStateExample from './components/usestate';
+import ModalS from './components/modals';
+import ImgB from './components/imageb';
 
 export default function App() {
   return (
@@ -43,7 +45,7 @@ export default function App() {
     <Lflex color="green" mflex={3} />
     <Lflex color="yellow" mflex={4} /> */}
 
-   < UseStateExample  />
+   < ImgB  />
     </>
 
    
